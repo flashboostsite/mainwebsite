@@ -1,0 +1,265 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf5e6;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .logo img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .map img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .services,
+        .service-area,
+        .questions {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #0073e6;
+        }
+
+        .why-choose {
+            background-color: #f5e1c9;
+            padding: 40px 20px;
+        }
+
+        .why-choose h2 {
+            margin-bottom: 20px;
+        }
+
+        .why-choose .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .feature {
+            background-color: #fdf5e6;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: left;
+            max-width: 250px;
+            flex: 1;
+        }
+
+        .feature img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .accordion {
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            transition: background-color 0.3s ease;
+            background-color: #f5e1c9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            position: relative;
+            font-weight: bold;
+            color: black;
+        }
+
+        .accordion::after {
+            content: "▼";
+            font-size: 12px;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .accordion.active::after {
+            content: "▲";
+        }
+
+        .panel {
+            padding: 0 10px;
+            background-color: #f5e1c9;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            margin-bottom: 5px;
+        }
+
+        .blog-section {
+            padding: 40px 20px;
+            background-color: #fdf5e6;
+            text-align: left;
+        }
+
+        .blog-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .blogs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .blog {
+            max-width: 300px;
+            margin: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .blog img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .blog-content h3 {
+            margin: 10px 0;
+        }
+
+        .blog-content p {
+            color: #666;
+        }
+
+        blog-button {
+            border-radius: 5px;
+            background-color: f5e1c9;
+        }
+
+        .icons img{
+            width:25px;
+            height:25px;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, white 33%, gray 33%, gray 66%, black 66%);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            z-index: -1;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .feature {
+                max-width: none;
+                margin: 10px auto;
+            }
+
+            .blogs {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
