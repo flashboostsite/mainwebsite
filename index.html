@@ -22,12 +22,14 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .nav-links {
@@ -56,135 +58,6 @@
 
         .content {
             padding: 20px;
-        }
-
-        .services,
-        .service-area,
-        .questions {
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
-            padding: 20px 0;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #0073e6;
-        }
-
-        .why-choose {
-            background-color: #f5e1c9;
-            padding: 40px 20px;
-        }
-
-        .why-choose h2 {
-            margin-bottom: 20px;
-        }
-
-        .why-choose .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .feature {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            text-align: left;
-            max-width: 250px;
-            flex: 1;
-        }
-
-        .feature img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .accordion {
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            transition: background-color 0.3s ease;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
-            position: relative;
-            font-weight: bold;
-        }
-
-        .accordion::after {
-            content: "▼";
-            font-size: 12px;
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .accordion.active::after {
-            content: "▲";
-        }
-
-        .panel {
-            padding: 0 10px;
-            background-color: #f5f5f5;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-
-        .blog-section {
-            padding: 40px 20px;
-            background-color: #fdf5e6;
-            text-align: left;
-        }
-
-        .blog-section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .blogs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .blog {
-            max-width: 300px;
-            margin: 15px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .blog img {
-            width: 100%;
-            height: auto;
-        }
-
-        .blog-content {
-            padding: 15px;
-        }
-
-        .blog-content h3 {
-            margin: 10px 0;
-        }
-
-        .blog-content p {
-            color: #666;
         }
 
         footer {
@@ -224,9 +97,16 @@
                 position: absolute;
                 top: 60px;
                 left: 0;
-                width: 100%;
+                width: calc(100% - 40px);
                 background-color: #fff;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin: 0 20px;
+                text-align: left;
+            }
+
+            .nav-links a {
+                padding: 10px;
+                margin: 0;
             }
 
             .nav-links.active {
@@ -240,20 +120,6 @@
             nav {
                 position: relative;
             }
-
-            .features {
-                flex-direction: column;
-            }
-
-            .feature {
-                max-width: none;
-                margin: 10px auto;
-            }
-
-            .blogs {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 </head>
@@ -263,7 +129,7 @@
 <header>
     <nav>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        
+   
         <ul class="nav-links">
             <li><a href="home.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -274,14 +140,14 @@
 </header>
 
 <div class="content" id="home">
-  <div class="logo">
-            <img src="https://i.imgur.com/FXOdH08.png" alt="Flash Boost Logo">
-        </div>
+    <div class="logo">
+        <img src="https://i.imgur.com/FXOdH08.png" alt="Flash Boost Logo">
+    </div>
     <h1>Quick, Affordable Battery Boost Service in Toronto and GTA</h1>
     <div class="contact-info">
         <p>📞 647-975-7156</p>
     </div>
-  
+
     <div class="services" id="services">
         <h2>Our Car Battery Boosting Services</h2>
         <p>At Flash Boost, we offer quick, affordable car battery boosting services in Toronto and the GTA to get you back on the road quickly. Our team is available 24/7 to provide fast and reliable assistance starting at only $45 (depending on distance).</p>
@@ -382,7 +248,7 @@
         <a href="#blog">Blog</a>
         <a href="contact.html">Contact Us</a>
     </div>
-    <div>
+   div>
         <a href="#"><img src="https://via.placeholder.com/24" alt="Facebook"></a>
         <a href="#"><img src="https://via.placeholder.com/24" alt="Instagram"></a>
         <a href="#"><img src="https://via.placeholder.com/24" alt="LinkedIn"></a>
